@@ -1,0 +1,22 @@
+{
+    "name": "aethalides/systemd-notify",
+    "description": "Interact with the Systemd Notify daemon for service lifecycle integration",
+    "type": "library",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "Aethalides",
+            "email": "Aethalides@AndyPieters.me.uk"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+		"php": ">=7.1.0",
+		"ext-sockets": "*"
+    },
+    "autoload": {
+		"psr-4": {
+			"Aethalides\\Systemd\\Notify\\": "src/"
+		}
+    }
+}

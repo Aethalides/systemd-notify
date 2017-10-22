@@ -1,0 +1,18 @@
+This package allows you to interact with the Systemd Notification
+daemon.
+
+It is meant to provide feedback to Systemd about the runtime status
+of a service.
+
+A service periodically sends watchdog (heartbeat) events to
+Systemd's notification daemon. When the watchdog (heartbeat) events
+stop, Systemd knows the service has a problem and can restart it.
+
+Three classes are provided to interact with the notification service.
+
+Notify is the general purpose implementation.
+NotifyHeartbeat is ideal for applications that only send heartbeats
+NotifyFluent has the same methods as Notify but all the setters are
+fluent.
+
+See the test-service.php, and test-service.service for examples
