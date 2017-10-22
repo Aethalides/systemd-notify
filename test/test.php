@@ -3,7 +3,7 @@
 	use Aethalides\Systemd\Notify\Notify;
 		$x=new Notify;
 		$x->open();
-		$x->setVariable('X_YOURMOM',13);
+		$x->setVariable('X_TEST',13);
 		$x->setPid();
 		$x->close();
 		$x->open();
