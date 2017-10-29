@@ -2,8 +2,10 @@
 ## Installing the example ##
 
 After downloading the example to the `/opt/systemd-notify/examples/lookupd` directory, cd to the directory and execute:
+
 ````bash
-composer install````
+composer install
+````
 
 Edit the lookupd.service file and adjust the `User`, and `Group` entries according to your needs, then execute:
 
