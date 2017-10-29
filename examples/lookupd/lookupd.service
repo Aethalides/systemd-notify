@@ -1,0 +1,15 @@
+[Unit]
+Description=Example service to lookup hostnames
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/php /opt/systemd-notify/examples/lookupd/lookupd-start.php
+Type=notify
+Restart=always
+RestartSec=15
+WatchdogSec=20
+User=Andy
+Group=Andy
+
+[Install]
+WantedBy=multi-user.target
