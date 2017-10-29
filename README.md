@@ -5,10 +5,11 @@ to the systemd notification system.
 
 ## Use this library if... ##
 
-When you have a script that is started as a service by systemd, and you want systemd to
-restart the service when it develops an error.
+You have a script that is started as a service by systemd, and you want systemd to
+restart the service when it develops an error, or
 
-e.g. the script is "alive" but it is stuck waiting on an external resource
+You have a long running script and want to provide a status description viewable 
+by the `systemctl status myservice` command.
 
 ## Do not use this library if... ##
 * The system is not run by SystemD (e.g. FreeBSD, Windows, ...)
