@@ -53,7 +53,7 @@
 
         public function __toString() : string {
 
-            if(is_resource($this->lsocket)) {
+            if($this->lsocket !== null) {
 
                 return sprintf(
 

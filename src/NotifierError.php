@@ -56,9 +56,9 @@
 				return new static("Socket connection already open");
 			}
 
-			public static function socketCreateError($resSocket) : self {
+			public static function socketCreateError($resSocket = null) : self {
 
-				if(is_resource($resSocket)) {
+				if($resSocket !== null) {
 
 					$intSocketError=socket_last_error($resSocket);
 

@@ -118,7 +118,7 @@
 					NOTIFY_SOCKET_PROTOCOL
 				);
 
-				if(!is_resource($resSocket)) {
+				if($resSocket === false) {
 
 					throw NotifierError::socketCreateError();
 				}
@@ -135,7 +135,7 @@
 
 			public function close() {
 
-				if(!is_resource($this->resSocket)) {
+				if($this->resSocket === null) {
 
 					throw NotifierError::socketNotOpenError();
 				}
@@ -147,7 +147,7 @@
 
 			public function isOpened() : bool {
 
-				return is_resource($this->resSocket);
+				return (version_compare(PHP_VERSION, '8.0.0', '<') ? is_resource($this->resSocket) : ($this->resSocket !== null));
 			}
 
 			public function isClosed() : bool {
@@ -178,7 +178,7 @@
 					return;
 				}
 
-				if(!is_resource($this->resSocket)) {
+				if($this->resSocket === null) {
 
 					throw NotifierError::socketNotOpenError();
 				}
